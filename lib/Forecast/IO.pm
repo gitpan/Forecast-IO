@@ -41,7 +41,7 @@ has flags     => ( is => 'ro' );
 sub BUILDARGS {
     my ( $class, %args ) = @_;
 
-    my $url    = "";
+    my $url = "";
     my @params;
     if ( exists( $args{time} ) && $args{time} ne '' ) {
         @params = ( $args{latitude}, $args{longitude}, $args{time} );

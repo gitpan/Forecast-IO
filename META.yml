@@ -3,6 +3,7 @@ abstract: 'provides perl API to Forecast.io'
 author:
   - 'Martin-Louis Bright <mlbright@gmail.com>'
 build_requires:
+  Term::ReadKey: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -19,4 +20,4 @@ requires:
   Moo: 0
   strict: 0
   warnings: 0
-version: 0.001
+version: 0.1
