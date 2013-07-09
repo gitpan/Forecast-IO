@@ -86,29 +86,29 @@ Forecast::IO - Provides Perl API to Forecast.io
 
 =head1 SYNOPSIS
 
-use 5.016;
-use Forecast::IO;
-use Data::Dumper;
+    use 5.016;
+    use Forecast::IO;
+    use Data::Dumper;
 
-my $lat  = 43.6667;
-my $long = -79.4167;
-my $key = "c9ce1c59d139c3dc62961cbd63097d13"; # example Forecast.io API key
+    my $lat  = 43.6667;
+    my $long = -79.4167;
+    my $key = "c9ce1c59d139c3dc62961cbd63097d13"; # example Forecast.io API key
 
-my $forecast = Forecast::IO->new(
-    key       => $key,
-    longitude => $long,
-    latitude  => $lat,
-);
+    my $forecast = Forecast::IO->new(
+        key       => $key,
+        longitude => $long,
+        latitude  => $lat,
+    );
 
-say "current temperature: " . $forecast->{currently}->{temperature};
+    say "current temperature: " . $forecast->{currently}->{temperature};
 
-my @daily_data_points = @{ $forecast->{daily}->{data} };
+    my @daily_data_points = @{ $forecast->{daily}->{data} };
 
-# Use your imagination about how to use this data.
-# in the meantime, inspect it by dumping it.
-for (@daily_data_points) {
-    print Dumper($_);
-}
+    # Use your imagination about how to use this data.
+    # in the meantime, inspect it by dumping it.
+    for (@daily_data_points) {
+        print Dumper($_);
+    }
 
 =head1 DESCRIPTION
 
